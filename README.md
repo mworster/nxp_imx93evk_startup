@@ -18,3 +18,14 @@ The latest at this time (24.04) wouldn't load in the virtual box, and that's fin
 
 After picking 20 cores and 25GB of RAM it was time to launch the VM and install Ubuntu.
 
+You'll want to enable the bidirectioal clipboard under devices->shared clipboard
+
+With the VM up and running we can follow the Yocto User's guide from NXP to get the basics installed:
+https://www.nxp.com/docs/en/user-guide/IMX_YOCTO_PROJECT_USERS_GUIDE.pdf
+
+First the guide says that we need to install the compents in a seperate guide:
+https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html#yocto-project-quick-build
+
+$ sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev python3-subunit mesa-common-dev zstd liblz4-tool file locales libacl1
+$ sudo locale-gen en_US.UTF-8
+
