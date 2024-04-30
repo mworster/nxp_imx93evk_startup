@@ -54,3 +54,14 @@ $ cd imx-yocto-bsp
 $ repo init -u https://github.com/nxp-imx/imx-manifest
 -b imx-linux-kirkstone -m imx-5.15.52-2.1.0.xml
 $ repo sync
+
+
+Finally it's time to run the setup script and do the build. 
+$ DISTRO=fsl-imx-wayland MACHINE=imx93evk source imx-setup-release.sh -b
+ build_dir
+
+ This sets up the wayland UI backend and our target machine and drops us in the newly created `build_dir` directory. 
+
+Now attempt to build the target:
+
+$ builddir > bitbake imx-image-core
